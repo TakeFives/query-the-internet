@@ -1,0 +1,9 @@
+
+.hero {
+    min-height: 60vh;
+    background: var(--clr-bg-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}

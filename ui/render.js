@@ -11,9 +11,11 @@ import ItemsGrid from "./components/fetures/items-grid.js";
 import setupEventListeners from "./events.js";
 
 // const countries = await loadAllCountries();
-const countriesOfEurope = await loadAllEuropeCountries();
+let countriesOfEurope = [];
 
 export default async function renderDom() {
+  countriesOfEurope = await loadAllEuropeCountries();
+
   const app = document.createElement("div");
   const main = Main();
   const wrapper = Wrapper();

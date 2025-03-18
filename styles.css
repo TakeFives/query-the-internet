@@ -1,7 +1,8 @@
-@import './styles/globals/reset.css';
-@import './styles/globals/typography.css';
-@import './styles/globals/global.css';
-@import './styles/globals/colors.css';
+@import "./styles/globals/reset.css";
+@import "./styles/globals/typography.css";
+@import "./styles/globals/global.css";
+@import "./styles/globals/colors.css";
 
-@import './styles/components/header.css';
-@import './styles/components/hero.css';
+@import "./styles/components/header.css";
+@import "./styles/components/hero.css";
+@import "./styles/components/items-grid.css";

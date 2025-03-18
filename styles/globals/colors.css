@@ -1,21 +1,31 @@
 :root {
-    /* BACKGROUND */
-    --clr-bg-main: hsl(0, 0%, 100%);
-    --clr-bg-light: hsl(0, 0%, 93%);
-    --clr-bg-dark: hsl(0, 0%, 27%);
-    --clr-bg-gradient:  linear-gradient(to right, hsl(178, 51%, 50%), hsl(194, 72%, 43%));
-    
-    /* TEXT */
-    --clr-text-light: hsla(0, 0%, 100%, 1);
-    --clr-text-dark: hsla(227.6, 28.2%, 20.2%, 1);
-    --clr-text-grey: hsl(207, 21%, 27%);
-    
-    /* LINK */
-    --clr-link: hsl(178, 51%, 50%);
-    --clr-link-hover:  hsl(178, 69%, 31%);
-  
-    /* BUTTON */
-    --clr-btn-bg-primary: hsl(194, 72%, 43%);
-    --clr-bg-btn-hover: hsl(194, 82%, 18%);
-  }
-  
+  /* BACKGROUND */
+  --clr-bg-main: hsl(0, 0%, 100%);
+  --clr-bg-light: hsl(0, 0%, 93%);
+  --clr-bg-dark: hsl(0, 0%, 27%);
+  --clr-bg-gradient: linear-gradient(
+    to right,
+    hsl(178, 51%, 50%),
+    hsl(194, 72%, 43%)
+  );
+
+  /* TEXT */
+  --clr-text-light: hsla(0, 0%, 100%, 1);
+  --clr-text-dark: hsla(227.6, 28.2%, 20.2%, 1);
+  --clr-text-grey: hsl(207, 21%, 27%);
+
+  /* LINK */
+  --clr-link: hsl(178, 51%, 50%);
+  --clr-link-hover: hsl(178, 69%, 31%);
+
+  /* BUTTON */
+  --clr-btn-bg-primary: hsl(194, 72%, 43%);
+  --clr-bg-btn-hover: hsl(194, 82%, 18%);
+
+  /* MESSAGE INFO */
+  --clr-message-info: hsl(183, 59%, 63%, 0.2);
+
+  /* SERVICE COLORS */
+
+  --clr-alert: hsl(0, 100%, 50%);
+}

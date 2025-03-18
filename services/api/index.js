@@ -24,7 +24,7 @@ const request = async (endpoint) => {
     return await response.json();
   } catch (error) {
     console.error("API Error:", error);
-    return null;
+    return [];
   }
 };
 

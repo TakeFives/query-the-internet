@@ -1,24 +1,36 @@
-export default function ItemsGrid (items) {
-    const grid = document.createElement('section');
-    grid.className = 'items-grid section';
+import { RemoveButton } from "../globals/buttons.js";
 
-    items.forEach(item => {
-        const card = itemCard(item);
-        grid.appendChild(card);
-    }
-    );
+export default function ItemsGrid(items) {
+  const grid = document.createElement("section");
+  grid.className = "items-grid section";
 
-    return grid;
+  items.forEach((item) => {
+    const card = itemCard(item);
+    grid.appendChild(card);
+  });
+
+  return grid;
 }
 
-function itemCard (item) {
-    const card = document.createElement('div');
-    card.className = 'item-card';
+function itemCard(item) {
+  const itemName = item.name.common;
+  const ItemCapital = item.capital[0];
 
-    const title = document.createElement('h2');
-    title.textContent = item.name.common;
-    card.appendChild(title);
+  const removeBtn = RemoveButton(itemName);
 
-    return card;
+  const card = document.createElement("div");
+  card.className = "item-card";
+  card.dataset.nameId = itemName;
+
+  const cardTitle = document.createElement("h2");
+  cardTitle.textContent = itemName;
+
+  const cardParagraph = document.createElement("p");
+  cardParagraph.textContent = `The capital of ${itemName} is ${ItemCapital}`;
+
+  card.appendChild(cardTitle);
+  card.appendChild(cardParagraph);
+  card.appendChild(removeBtn);
+
+  return card;
 }
-

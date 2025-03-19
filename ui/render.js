@@ -1,43 +1,36 @@
-import {
-  loadAllCountries,
-  loadAllEuropeCountries,
-} from "../services/api/fetch.js";
+import { europeanCountries } from "../services/data/countries.js"
 
 import Main from "./components/common/main.js";
 import Wrapper from "./components/globals/wrapper.js";
 import Header from "./components/common/header.js";
 import Hero from "./components/common/hero.js";
 import ItemsGrid from "./components/fetures/items-grid.js";
-import setupEventListeners from "./events.js";
+import Form from "./components/fetures/form.js";
 
-// const countries = await loadAllCountries();
-let countriesOfEurope = [];
+import {setupEventListeners, setupFormSubmit} from "./events.js";
 
-export default async function renderDom() {
-  countriesOfEurope = await loadAllEuropeCountries();
+export default function renderDom() {
 
   const app = document.createElement("div");
+
   const main = Main();
   const wrapper = Wrapper();
+  const itemsToRender = ItemsGrid(europeanCountries);
+  const form = Form();
 
   app.className = "app";
 
   app.appendChild(Header());
-
   main.appendChild(Hero());
+  
+  wrapper.appendChild(itemsToRender);
+  wrapper.appendChild(form);
 
-  if (countriesOfEurope.length === 0) {
-    const message = document.createElement("p");
-    message.className = "message info__message";
-    message.textContent = "Nothing to show";
-    wrapper.appendChild(message);
-  } else {
-    wrapper.appendChild(ItemsGrid(countriesOfEurope));
-  }
   main.appendChild(wrapper);
   app.appendChild(main);
 
   document.body.appendChild(app);
 
-  setupEventListeners();
+  setupEventListeners(itemsToRender);
+  setupFormSubmit(itemsToRender);
 }

@@ -1,6 +1,14 @@
 import { RemoveButton } from "../globals/buttons.js";
 
 export default function ItemsGrid(items) {
+
+ if (items.length === 0) {
+    const message = document.createElement("p");
+    message.className = "message info__message";
+    message.textContent = "Nothing to show";
+    return message;
+  }
+
   const grid = document.createElement("section");
   grid.className = "items-grid section";
 

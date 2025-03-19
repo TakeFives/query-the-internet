@@ -25,7 +25,7 @@
 .btn__remove {
   background-color: var(--clr-bg-dark);
   color: var(--clr-text-light);
-  font-size: 1%;
+  font-size: 1rem;
   display: flex;
   border-radius: 50%;
   height: 20px;

@@ -1,9 +1,10 @@
-export default function setupEventListeners() {
-  const itemsGrid = document.querySelector(".items-grid");
+import { queryRenderedItems } from "../services/utils/query-items.js"
 
-  if(!itemsGrid) return
+export function setupEventListeners(renderedItems) {
 
-  itemsGrid.addEventListener("click", (event) => {
+  if (!renderedItems) return;
+
+  renderedItems.addEventListener("click", (event) => {
     const isRemoveBtn = event.target.classList.contains("btn__remove");
 
     if (!isRemoveBtn) {
@@ -18,18 +19,35 @@ export default function setupEventListeners() {
 
     if (itemId === buttonId) {
       // item.remove();
-      const items = Array.from(itemsGrid.querySelectorAll(".item-card"));
-      console.log(items)
+      const items = Array.from(renderedItems.querySelectorAll(".item-card"));
       const itemIndex = items.findIndex((el) => el.dataset.nameId === itemId);
 
       if (itemIndex !== -1) {
         items.splice(itemIndex, 1);
-        itemsGrid.innerHTML = "";
-        items.forEach((el) => itemsGrid.appendChild(el));
+        renderedItems.innerHTML = "";
+        items.forEach((el) => renderedItems.appendChild(el));
       }
-
     }
   });
 }
 
+export function setupFormSubmit(renderedItems) {
+  const form = document.querySelector(".user-form");
+  const submitter = document.querySelector("button[type=submit]");
+  
+  if (!form) return; 
 
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); 
+
+    const formData = new FormData(form); 
+    const userData = Object.fromEntries(formData.entries());
+
+    const items = Array.from(renderedItems.querySelectorAll(".item-card"));
+    const queriedItems = queryRenderedItems(items, [userData['number-of-items'], userData['filter-name']]);
+    
+    renderedItems.innerHTML = "";
+    queriedItems.forEach((el) => renderedItems.appendChild(el));
+  });
+
+}

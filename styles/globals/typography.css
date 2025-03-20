@@ -23,9 +23,13 @@ h2 {
 
 p {
   font: var(--fw-light) var(--fs-paragraph) / 1.5 var(--ff);
-  color: var(--clr-text-grey); /* Assuming you want this color */
+  color: var(--clr-text-grey);
 }
 
 button {
   font: var(--fw-regular) var(--fs-link) / 1.5 var(--ff);
+}
+
+form {
+  font: var(--fw-light) var(--fs-paragraph) / 1.5 var(--ff);
 }

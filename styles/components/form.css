@@ -1,4 +1,10 @@
 .user-form{
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem;
+    background: var(--clr-bg-gradient);
+    border-radius: 10px;
+    max-width: 40rem;
+    margin-inline: auto;
 }

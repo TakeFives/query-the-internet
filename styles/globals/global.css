@@ -18,3 +18,18 @@ button {
   box-shadow: none;
   cursor: pointer;
 }
+
+button[type=submit]{
+  padding: 1rem 2rem;
+  align-self: center;
+}
+
+input[type=text]{
+  border: none;
+  background-color: var(--clr-input-bg-primary);
+  color: var(--clr-input-text);
+}
+
+label {
+  color: var(--clr-text-light);
+}

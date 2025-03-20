@@ -2,7 +2,7 @@ export function queryRenderedItems(arr, [numberOfItems, filterName]) {
 
   if (!Array.isArray(arr) || arr.length === 0) {
     return [];
-  } // No items given;
+  } 
 
   if (!numberOfItems && !filterName) return arr;
 

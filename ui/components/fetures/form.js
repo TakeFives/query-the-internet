@@ -26,7 +26,7 @@ export default function Form () {
     
         // Number of Items (Radio buttons)
         const numberOfItemsLabel = document.createElement('label');
-        numberOfItemsLabel.textContent = 'Number of Items:';
+        numberOfItemsLabel.textContent = 'Number of items to show:';
     
         const numberOfItemsGroup = document.createElement('div');
         numberOfItemsGroup.className = 'radio-group';
@@ -55,7 +55,6 @@ export default function Form () {
         filterInput.type = 'text';
         filterInput.id = 'filter-name';
         filterInput.name = 'filter-name';
-        filterInput.placeholder = 'write item name';
     
         // Submit Button
         const submitButton = document.createElement('button');

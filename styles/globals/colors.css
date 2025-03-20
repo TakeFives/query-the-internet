@@ -22,10 +22,13 @@
   --clr-btn-bg-primary: hsl(194, 72%, 43%);
   --clr-bg-btn-hover: hsl(194, 82%, 18%);
 
+  /* INPUT TEXT */
+  --clr-input-bg-primary: hsl(0, 0%, 94%);
+  --clr-input-text: hsl(194, 82%, 18%);
+
   /* MESSAGE INFO */
   --clr-message-info: hsl(183, 59%, 63%, 0.2);
 
   /* SERVICE COLORS */
-
   --clr-alert: hsl(0, 100%, 50%);
 }
